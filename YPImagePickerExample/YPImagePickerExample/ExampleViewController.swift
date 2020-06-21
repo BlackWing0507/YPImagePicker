@@ -174,6 +174,8 @@ class ExampleViewController: UIViewController {
 
         config.library.preselectedItems = selectedItems
         
+//        config.hideNavigationLeftButton = true
+        
         let picker = YPImagePicker(configuration: config)
 
         /* Change configuration directly */

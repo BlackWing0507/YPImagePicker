@@ -83,6 +83,9 @@ public struct YPImagePickerConfiguration {
     
     /// Defines if the bottom bar should be hidden when showing the picker. Default is false.
     public var hidesBottomBar = false
+    
+    /// ナビゲーションの左側ボタン表示
+    public var hideNavigationLeftButton = false
 
     /// Defines the preferredStatusBarAppearance
     public var preferredStatusBarStyle = UIStatusBarStyle.default

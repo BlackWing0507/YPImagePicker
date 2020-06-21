@@ -29,6 +29,8 @@ open class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
     public var didClose:(() -> Void)?
     public var didSelectItems: (([YPMediaItem]) -> Void)?
     
+    var hideNavigationLeftButton = false
+    
     enum Mode {
         case library
         case camera
@@ -265,10 +267,13 @@ open class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
     
     func updateUI() {
         // Update Nav Bar state.
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: YPConfig.wordings.cancel,
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(close))
+        if !self.hideNavigationLeftButton {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: YPConfig.wordings.cancel,
+                                                               style: .plain,
+                                                               target: self,
+                                                               action: #selector(close))
+        }
+        
         switch mode {
         case .library:
             setTitleViewWithTitle(aTitle: libraryVC?.title ?? "")
