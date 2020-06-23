@@ -16,7 +16,7 @@ protocol YPBottomPagerDelegate: class {
 open class YPBottomPager: UIViewController, UIScrollViewDelegate {
     
     weak var delegate: YPBottomPagerDelegate?
-    var controllers = [UIViewController]() { didSet { reload() } }
+    open var controllers = [UIViewController]() { didSet { reload() } }
     
     var v = YPBottomPagerView()
     
