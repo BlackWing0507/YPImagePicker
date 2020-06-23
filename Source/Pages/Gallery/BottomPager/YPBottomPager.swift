@@ -17,6 +17,7 @@ open class YPBottomPager: UIViewController, UIScrollViewDelegate {
     
     weak var delegate: YPBottomPagerDelegate?
     open var controllers = [UIViewController]() { didSet { reload() } }
+    open var animated:Bool = true;
     
     var v = YPBottomPagerView()
     
@@ -83,7 +84,7 @@ open class YPBottomPager: UIViewController, UIScrollViewDelegate {
     
     @objc
     func tabTapped(_ b: UIButton) {
-        showPage(b.tag)
+        showPage(b.tag ,animated: self.animated)
     }
     
     func showPage(_ page: Int, animated: Bool = true) {
