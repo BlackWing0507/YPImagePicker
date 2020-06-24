@@ -12,7 +12,7 @@ import Stevia
 final class YPBottomPagerView: UIView {
     
     var header = YPPagerMenu()
-    var scrollView = UIScrollView()
+    public var scrollView = UIScrollView()
     
     convenience init() {
         self.init(frame: .zero)
