@@ -9,7 +9,7 @@
 import UIKit
 import Stevia
 
-final class YPBottomPagerView: UIView {
+public final class YPBottomPagerView: UIView {
     
     var header = YPPagerMenu()
     public var scrollView = UIScrollView()
